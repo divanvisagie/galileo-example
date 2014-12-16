@@ -4,4 +4,4 @@ all:
 	sh copy_and_run.sh
 
 push:
-	sh copy_and_run -i
+	sh copy_and_run.sh -i

@@ -6,6 +6,9 @@ function cleanup {
 
 function copy {
   echo  "Copying to:" "$IP"
+  command=$(printf "ssh root@%s mkdir deploy_run" "$IP")
+  echo "$command"
+  $command
   for i in $( ls ); do
     echo item: $i
     copy_command=$(printf "scp -r %s root@%s:~/deploy_run/" "$i" "$IP")
